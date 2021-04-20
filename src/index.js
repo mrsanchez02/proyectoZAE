@@ -3,9 +3,10 @@ const path = require('path')
 const socketio = require('socket.io')
 const http = require('http')
 const app = express()
+require('dotenv').config()
 
 //settings
-app.set('port', 3000)
+app.set('port', process.env.PORT || 3000)
 
 //middleware
 app.use(express.static(path.join(__dirname, 'public')))
