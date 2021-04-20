@@ -9,7 +9,7 @@ const button_addon2 = document.getElementById('button-addon2')
 
 write_message.addEventListener('keyup', (e) => {
     if (e.code == 'Enter') {
-        if (username.value != '' && write_message != '') {
+        if (username.value != '' && write_message.value != '') {
             socket.emit('message', {
                 username: username.value,
                 message: write_message.value //Agregar .slice(0, -1) en caso de text area.
@@ -22,7 +22,7 @@ write_message.addEventListener('keyup', (e) => {
 })
 
 button_addon2.addEventListener('click', (e) => {
-    if (username.value != '' && write_message != '') {
+    if (username.value != '' && write_message.value != '') {
         socket.emit('message', {
             username: username.value,
             message: write_message.value // Agregar .slice(0, -1) en caso de text area.
