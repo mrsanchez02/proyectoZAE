@@ -29,7 +29,7 @@ button_addon2.addEventListener('click', (e) => {
         })
         write_message.value = ''
     } else {
-        console.log("Favor ingresar todos los campos.")
+        alert('Uno o varios campos estan en blanco.')
     }
 })
 
