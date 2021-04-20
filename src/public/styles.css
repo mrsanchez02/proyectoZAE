@@ -1,0 +1,30 @@
+#chat{
+    margin: 0 auto;
+    width: 300px;
+}
+
+#all_messages{
+    margin-top: 1em;
+    height: 450px;
+    overflow: auto;
+    width: 100%;
+}
+
+.message {
+    background-color: #1ca2d6;
+    color: white;
+    padding: 5px;
+    margin-top: 12px;
+    display: inline-block;
+    margin-left: auto;
+    border-radius: 10px;
+}
+
+#write_message{
+    padding: 20px;
+    display: inline-block;
+}
+
+.botonera{
+    margin-top: 1em;
+}
