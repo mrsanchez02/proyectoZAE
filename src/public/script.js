@@ -12,7 +12,7 @@ write_message.addEventListener('keyup', (e) => {
         if (username.value != '' && write_message != '') {
             socket.emit('message', {
                 username: username.value,
-                message: write_message.value.slice(0, -1)
+                message: write_message.value //Agregar .slice(0, -1) en caso de text area.
             })
             write_message.value = ''
         } else {
