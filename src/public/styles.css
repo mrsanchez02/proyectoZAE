@@ -28,3 +28,20 @@
 .botonera{
     margin-top: 1em;
 }
+
+#usersOnline {
+    color: green;
+    display: inline-block;
+}
+
+#new_user{
+    color: white;
+    background-color: green;
+    display: inline-block;
+    padding: 0px 5px 0px 5px;
+    border-radius: 10px;    
+}
+
+span{
+    font-weight: bold;
+}

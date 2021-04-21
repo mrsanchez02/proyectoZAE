@@ -6,6 +6,7 @@ const all_messages = document.getElementById('all_messages')
 const new_user = document.getElementById('new_user')
 const writing = document.getElementById('writing')
 const button_addon2 = document.getElementById('button-addon2')
+const usersOnline = document.getElementById('usersOnline')
 
 write_message.addEventListener('keyup', (e) => {
     if (e.code == 'Enter') {
@@ -61,9 +62,15 @@ write_message.addEventListener('keydown', (e) => {
     }
 })
 
+// Indica cuando alguien esta escribiendo.
 socket.on('writing', (username) => {
     writing.innerHTML = username + " está escribiendo..."
     setTimeout(() => {
         writing.innerHTML = ''
     }, 3000)
+})
+
+// Actualiza el contador de usuarios conectados.
+socket.on('users', (number) => {
+    usersOnline.innerHTML = `Usuarios en linea: <span>${number}</span>`
 })
