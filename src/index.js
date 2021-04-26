@@ -11,6 +11,7 @@ app.set('port', process.env.PORT || 3000)
 //middleware
 app.use(express.static(path.join(__dirname, 'public')))
 
+//Socket io
 const server = http.createServer(app)
 const io = socketio(server)
 require('./socket')(io)
